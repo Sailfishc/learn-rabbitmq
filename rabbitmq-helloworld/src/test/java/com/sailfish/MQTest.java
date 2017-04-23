@@ -27,16 +27,25 @@ public class MQTest {
     @Autowired
     private TopicSender topicSender;
 
+    /**
+     * Hello world实例
+     */
     @Test
     public void testSender(){
         sender.send("ssd queue");
     }
 
+    /**
+     * fanout类型交换器
+     */
     @Test
     public void fanoutTest(){
         fanoutSender.send("email");
     }
 
+    /**
+     * topic类型交换器
+     */
     @Test
     public void topicTest(){
 //        topicSender.sendA("topic.a");
